@@ -1,0 +1,104 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --primary: #855300;
+    --primary-container: #f59e0b;
+    --on-primary: #ffffff;
+    --on-primary-container: #613b00;
+    --secondary: #2b6954;
+    --secondary-container: #adedd3;
+    --on-secondary: #ffffff;
+    --on-secondary-container: #306d58;
+    --tertiary: #006c49;
+    --tertiary-container: #30c88f;
+    --on-tertiary: #ffffff;
+    --error: #ba1a1a;
+    --error-container: #ffdad6;
+    --surface: #fff8f5;
+    --surface-container-lowest: #ffffff;
+    --surface-container-low: #fcf2eb;
+    --surface-container: #f6ece6;
+    --surface-container-high: #f0e6e0;
+    --surface-container-highest: #eae1da;
+    --on-surface: #1f1b17;
+    --on-surface-variant: #534434;
+    --outline: #867461;
+    --outline-variant: #d8c3ad;
+    --background: #fff8f5;
+  }
+
+  body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background-color: var(--background);
+    color: var(--on-surface);
+  }
+
+  h1, h2, h3, h4, h5, h6, .font-heading {
+    font-family: 'Manrope', system-ui, -apple-system, sans-serif;
+  }
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  vertical-align: middle;
+  line-height: 1;
+}
+
+.icon-filled, .material-symbols-outlined.filled {
+  font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+.glass-panel, .glass-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 10px 25px -5px rgba(6, 78, 59, 0.04);
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, #855300 0%, #2b6954 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-amber {
+  background: linear-gradient(135deg, #855300 0%, #f59e0b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f6ece6;
+}
+::-webkit-scrollbar-thumb {
+  background: #d8c3ad;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #867461;
+}
+
+/* Subtle modern dark sidebar scrollbar */
+.sidebar-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+.sidebar-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.sidebar-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.18);
+  border-radius: 9999px;
+}
+.sidebar-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.35);
+}
+.sidebar-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.18) transparent;
+}
